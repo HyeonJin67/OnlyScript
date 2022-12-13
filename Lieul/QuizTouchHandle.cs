@@ -4,8 +4,9 @@ using UnityEngine;
 //퀘스트별로 정답처리용 OnMouse관련 기능
 public class QuizTouchHandle : MonoBehaviour
 {
+    [Tooltip("정답용 오브젝트이면 체크")]
     [SerializeField]
-    bool answerCheck;
+    bool answerCheck; //정답인 오브젝트 확인용 파라미터
     int completedQuizOrder;
     private void OnEnable()
     {
@@ -21,7 +22,7 @@ public class QuizTouchHandle : MonoBehaviour
     }
     private void OnMouseUp()
     {
-        if (GetComponent<Outline>() && GetComponent<Animator>())
+        if (GetComponent<Outline>() && GetComponent<Animator>()) //4번째 퀘스트용 아웃라인
         {
             GetComponent<Outline>().enabled = true;
             GetComponent<Animator>().enabled = false;
@@ -29,7 +30,7 @@ public class QuizTouchHandle : MonoBehaviour
         if (answerCheck)
         {
             print("정답클릭!");
-            if (GetComponent<Rigidbody>()) //2번째 퀘스트에서 오브젝트 떨어뜨리기용
+            if (GetComponent<Rigidbody>()) //2번째 퀘스트용 떨어뜨리기
             {
                 GetComponent<Rigidbody>().useGravity = true;
             }
@@ -46,7 +47,7 @@ public class QuizTouchHandle : MonoBehaviour
         else
         {
             print("꽝");
-            //틀렸을 경우의 소리 넣기
+            //여기에 틀렸을 경우의 소리 넣기
         }
     }
     //퀘스트완료 지연 함수

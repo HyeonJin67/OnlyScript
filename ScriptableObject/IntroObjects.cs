@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//진호님의 NarrationSetContainer스크립트 참고하여 만듬
 [CreateAssetMenu(fileName = "IntroObjects", menuName = "Scriptable", order = 1)]
 [System.Serializable]
 public class IntroductionObjects 
