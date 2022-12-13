@@ -1,0 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+//¾À ·Îµå½Ã Æ©Åä¸®¾ó¾À ¸ÕÀú Àç»ý
+public class TestIntroduction : MonoBehaviour
+{
+    void Start()
+    {
+        LoadingIntroductionManager.LoadScene("Giyeok_Mission");
+    }
+}
